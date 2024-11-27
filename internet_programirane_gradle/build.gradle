@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.eclipse.jetty:jetty-server:11.0.15'
+    implementation 'org.eclipse.jetty:jetty-servlet:11.0.15'
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'commons-io:commons-io:2.11.0'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+tasks.named('test') {
+    useJUnit()
+}
